@@ -38,15 +38,17 @@ DATABASES = {
 }
 ```
 
-- Apply migrations and create superuser (if you would inspect `/admin`)
+- Apply migrations, collect static and create superuser (if you would inspect `/admin`)
 
 ```
-$ python app/manage.py migrate
-$ python app/manage.py createsuperuser
+$ cd app
+$ python manage.py migrate
+$ python manage.py collectstatic
+$ python manage.py createsuperuser
 ```
 
 - Run server and go to [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
 ```
-$ python app/manage.py runserver
+$ python manage.py runserver
 ```

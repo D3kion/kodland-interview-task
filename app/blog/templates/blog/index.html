@@ -1,9 +1,80 @@
-{% if posts %}
-    <ul>
-    {% for x in posts %}
-        <li><a href="#">{{ x.title }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No posts are available.</p>
-{% endif %}
+{% extends 'blog/_layout.html' %}
+{% load static %}
+{% load tz %}
+
+{% block header %}
+Блог
+{% endblock %}
+
+{% block content %}
+<div class="row kodland__promo-post">
+  <div class="col s7">
+    <div class="kodland__promo-post_attributes">
+      <span class="kodland__promo-post_attributes_new">NEW</span>
+      <a href="#" class="kodland__ui_likes kodland__promo-post_attributes_likes">
+        <span class="kodland__ui_likes-icon"></span>
+        <span>25</span>
+      </a>
+      <a href="#" class="kodland__ui_comments kodland__promo-post_attributes_comments">
+        <span class="kodland__ui_comments-icon"></span>
+        <span>25</span>
+      </a>
+      <a href="#" class="kodland__ui_views kodland__promo-post_attributes_views">
+        <span class="kodland__ui_views-icon"></span>
+        <span>25</span>
+      </a>
+    </div>
+    <div class="kodland__promo-post_title">
+      {{ last_post.title }}
+    </div>
+    <div class="kodland__promo-post_content">
+      {{ last_post.content }}
+    </div>
+    <button class="kodland__promo-post_read">
+      Читать
+    </button>
+  </div>
+  <div class="col s5">
+    <img class="kodland__promo-post_image" src="{{ last_post.image.url }}">
+  </div>
+</div>
+<div class="kodland__posts">
+  <div class="container">
+    <span class="kodland__posts_title">Другие статьи</span>
+    <a href="#" class="kodland__posts_filter"></a>
+    <div class="kodland__posts_list">
+      {% if posts %}
+      {% for y in posts %}
+      <div class="row">
+        {% for x in y %}
+        <div class="col kodland__posts_item">
+          <span class="kodland__posts_item-pubdate">
+            {{ x.pub_date|date:'d E Y H:i' }}
+          </span>
+          <img class="kodland__posts_item-image" src="{{ x.image.url }}">
+          <span class="kodland__posts_item-title">{{ x.title }}</span>
+          <div class="kodland__posts_item-attributes">
+            <a href="#" class="kodland__ui_likes kodland__posts_item-attributes_likes">
+              <span class="kodland__ui_likes-icon"></span>
+              <span>25</span>
+            </a>
+            <a href="#" class="kodland__ui_comments kodland__posts_item-attributes_comments">
+              <span class="kodland__ui_comments-icon"></span>
+              <span>25</span>
+            </a>
+            <a href="#" class="kodland__ui_views kodland__posts_item-attributes_views">
+              <span class="kodland__ui_views-icon"></span>
+              <span>25</span>
+            </a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      {% endfor %}
+      {% else %}
+      <p>Нет статей. :(</p>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endblock %}

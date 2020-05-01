@@ -1,0 +1,322 @@
+@font-face {
+  font-family: Circe Rounded Bold;
+  src: url(fonts/CirceRounded-Bold.woff);
+}
+@font-face {
+  font-family: Circe Rounded;
+  src: url(fonts/CirceRounded-Regular.woff);
+}
+@font-face {
+  font-family: Museo Cyrl;
+  src: url(fonts/Museocyrl500.woff);
+}
+
+/**
+ * UI
+ */
+.kodland__ui_likes,
+.kodland__ui_comments,
+.kodland__ui_views {
+  display: flex;
+  align-items: center;
+  height: 23px;
+  
+  font-family: Circe Rounded;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.416667px;
+  
+  color: #CDCDCD;
+}
+
+.kodland__ui_likes-icon,
+.kodland__ui_comments-icon,
+.kodland__ui_views-icon {
+  margin-right: 4px;
+}
+
+.kodland__ui_likes-icon {
+  content: url(images/like.svg);
+}
+
+.kodland__ui_comments-icon {
+  content: url(images/comments.svg);
+}
+
+.kodland__ui_views-icon {
+  content: url(images/views.svg);
+}
+
+/**
+ * NAVBAR
+ */
+.kodland__navbar {
+  height: 102px;
+  background-color: #FFF;
+  border-bottom: 2px solid #CDCDCD;
+  box-shadow: none;
+}
+
+.kodland__navbar_logo {
+  position: absolute;
+  width: 190px;
+  height: 72.28px;
+  left: 23px;
+  top: 16px;
+
+  background: url(images/Logo_Kodland.svg);
+}
+
+.kodland__navbar_pagename {
+  position: absolute;
+  left: 196px;
+  top: 41px;
+
+  font-family: Circe Rounded Bold;
+  font-size: 24px;
+  line-height: 31px;
+
+  color: #010101;
+}
+
+.kodland__navbar-menu {
+  position: absolute;
+  top: 16px;
+  right: 51px;
+}
+
+.kodland__navbar-menu__item {
+  position: absolute;
+}
+.kodland__navbar-menu__email {
+  width: 32px;
+  height: 32px;
+  right: 184px;
+  margin-top: 16px;
+
+  background: url(images/email.svg);
+}
+
+.kodland__navbar-menu__profile {
+  width: 74px;
+  height: 74px;
+  right: 98px;
+
+  background: url(images/Uchenik.svg);
+  border: 2px solid #010101;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.kodland__navbar-menu__logout {
+  width: 31px;
+  height: 31px;
+  right: 51px;
+  margin-top: 21px;
+
+  background: url(images/logout.svg);
+}
+
+/**
+ * PROMO POST
+ */
+.kodland__promo-post {
+  margin-top: 41px;
+  margin-bottom: 0;
+  margin-left: 13.5%;
+}
+
+.kodland__promo-post .col {
+  height: 100%;
+}
+
+.kodland__promo-post_attributes {
+  display: flex;
+  align-items: center;
+  margin-bottom: 11px;
+}
+
+.kodland__promo-post_attributes_new {
+  font-family: Circe Rounded Bold;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.416667px;
+
+  color: #E9399C;
+}
+
+.kodland__promo-post_attributes_likes {
+  margin-left: 17px;
+}
+
+.kodland__promo-post_attributes_comments,
+.kodland__promo-post_attributes_views {
+  margin-left: 8px;
+}
+
+.kodland__promo-post_title {
+  margin-bottom: 4px;
+
+  font-family: Museo Cyrl;
+  font-size: 45px;
+  font-weight: 900;
+  line-height: 52px;
+  letter-spacing: -0.416667px;
+
+  color: #315AF2;
+}
+
+.kodland__promo-post_content {
+  width: 60%;
+
+  font-family: Circe Rounded;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: normal;
+  letter-spacing: -0.416667px;
+  
+  color: #000000;
+}
+
+.kodland__promo-post_read {
+  margin-top: 27px;
+  margin-bottom: 57px;
+  padding: 12px 20px;
+
+  background: #315AF2;
+  border: 0;
+  border-radius: 3px;
+
+  font-family: Museo Cyrl;
+  font-size: 36px;
+  line-height: 43px;
+  font-weight: 700;
+  letter-spacing: -0.416667px;
+  color: #FFF;
+  cursor: pointer;
+}
+
+.kodland__promo-post_image {
+  position: relative;
+  width: 100%;
+  right: 3em;
+  height: auto;
+  margin: auto 0;
+}
+
+/**
+ * OTHER POSTS
+ */
+.kodland__posts {
+  width: 100%;
+  border-top: 2px solid #CDCDCD;
+}
+
+.kodland__posts .container {
+  margin-top: 46px;
+}
+
+.kodland__posts_title {
+  font-family: Museo Cyrl;
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 20px;
+  letter-spacing: -0.416667px;
+  color: #315AF2;
+}
+
+.kodland__posts_filter {
+  width: 37.1px;
+  height: 38px;
+  margin-top: -.75em;
+  float: right;
+
+  content: url(images/filter.svg);
+}
+
+.kodland__posts_list {
+  margin-top: 32px;
+}
+
+.kodland__posts_list .row {
+  display: flex;
+}
+
+.kodland__posts_list .row:not(:first-child) {
+  margin-top: 25px;
+}
+
+.kodland__posts_list .row .col:not(:first-child) {
+  margin-left: 17px;
+}
+
+.kodland__posts_item {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  width: 100%;
+  max-width: 34%;
+
+  background: #FFFFFF;
+  border: 2px solid #CDCDCD;
+  border-radius: 3px;
+}
+
+.kodland__posts_item:hover {
+  border: 2px solid #E2EDF8;
+  box-shadow: 0px 2px 10px #E2EDF8;
+  cursor: pointer;
+}
+
+.kodland__posts_item-pubdate {
+  margin-top: .5em;
+  margin-left: .75em;
+
+  font-family: Circe Rounded;
+  font-size: 12px;
+  line-height: 20px;
+
+  letter-spacing: -0.416667px;
+
+  color: #979797;
+}
+
+.kodland__posts_item-image {
+  margin-top: .2em;
+  width: auto;
+  height: 50%;
+}
+
+.kodland__posts_item-title {
+  margin-top: 23px;
+
+  font-family: Circe Rounded;
+  font-size: 24px;
+  line-height: 28px;
+
+  text-align: center;
+  letter-spacing: -0.416667px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  color: #315AF2;
+}
+
+.kodland__posts_item-attributes {
+  display: flex;
+  margin-top: auto;
+  margin-bottom: .75em;
+}
+
+.kodland__posts_item-attributes_likes {
+  margin-left: .5em;
+}
+
+.kodland__posts_item-attributes_comments {
+  margin-left: 1em;
+}
+
+.kodland__posts_item-attributes_views {
+  margin-right: .5em;
+  margin-left: auto;
+}

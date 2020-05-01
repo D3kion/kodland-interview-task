@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kodland</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}">
+</head>
+
+<body>
+  <header>
+    <nav class="kodland__navbar">
+      <a href="#" class="kodland__navbar_logo"></a>
+      <span class="kodland__navbar_pagename">
+        {% block header %}Блог{% endblock %}
+      </span>
+      <div class="kodland__navbar-menu">
+        <a href="#" class="kodland__navbar-menu__item kodland__navbar-menu__email"></a>
+        <a href="#" class="kodland__navbar-menu__item kodland__navbar-menu__profile"></a>
+        <a href="#" class="kodland__navbar-menu__item kodland__navbar-menu__logout"></a>
+      </div>
+    </nav>
+
+  </header>
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>

@@ -1,6 +1,8 @@
 from django.shortcuts import render
+from django.http import HttpResponse, HttpResponseRedirect
 
 from .models import Post
+from .forms import PostForm
 
 
 def index(req):
@@ -15,4 +17,22 @@ def index(req):
 
 
 def create_post(req):
-    return render(req, 'blog/create_post.html')
+    if req.method == 'POST':
+        form = PostForm(req.POST, req.FILES)
+        if form.is_valid():
+            name = form.cleaned_data.get("title")
+            content = form.cleaned_data.get("content")
+            image = form.cleaned_data.get("image")
+            obj = Post.objects.create(
+                title=name,
+                content=content,
+                image=image,
+            )
+            obj.save()
+            return HttpResponseRedirect('/')
+        else:
+            return HttpResponse('Bad Request', status=400)
+    elif req.method == 'GET':
+        return render(req, 'blog/create_post.html')
+    else:
+        return HttpResponse('Method Not Allowed', status=405)

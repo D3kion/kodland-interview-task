@@ -7,7 +7,7 @@
 {% block content %}
 <div class="kodland__create-post">
   <span class="kodland__create-post_title">Добавить статью</span>
-  <form action="/posts/create" method="POST">
+  <form action="{% url 'create-post' %}" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     <div class="row">
       <div class="col s8">
@@ -30,7 +30,7 @@
       <div class="col s4">
         <div class="kodland__create-post_image-wrapper">
           <div class="kodland__create-post_image-title">Загрузить изображение</div>
-          <input class="kodland__create-post_image-input" id="image" type="file">
+          <input class="kodland__create-post_image-input" name="image" type="file">
           <button class="kodland__ui_button kodland__create-post_image-upload">
             Выбрать
           </button>

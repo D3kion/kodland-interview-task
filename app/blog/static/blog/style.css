@@ -14,6 +14,25 @@
 /**
  * UI
  */
+.kodland__ui_button {
+  background: #315AF2;
+  border: 0;
+  border-radius: 3px;
+
+  font-family: Museo Cyrl;
+  font-size: 36px;
+  line-height: 43px;
+  font-weight: 700;
+  letter-spacing: -0.416667px;
+  color: #FFF;
+  cursor: pointer;
+}
+
+.kodland__ui_button:hover,
+.kodland__ui_button:focus {
+  background: rgba(49, 90, 242, 0.75);
+}
+
 .kodland__ui_likes,
 .kodland__ui_comments,
 .kodland__ui_views {
@@ -182,18 +201,6 @@
   margin-top: 27px;
   margin-bottom: 57px;
   padding: 12px 20px;
-
-  background: #315AF2;
-  border: 0;
-  border-radius: 3px;
-
-  font-family: Museo Cyrl;
-  font-size: 36px;
-  line-height: 43px;
-  font-weight: 700;
-  letter-spacing: -0.416667px;
-  color: #FFF;
-  cursor: pointer;
 }
 
 .kodland__promo-post_image {

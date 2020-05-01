@@ -327,3 +327,171 @@
   margin-right: .5em;
   margin-left: auto;
 }
+
+/**
+ * CREATE POST
+ */
+.kodland__create-post {
+  margin: 39px 10% 0;
+}
+
+.kodland__create-post_title {
+  font-family: Museo Cyrl;
+  font-size: 45px;
+  font-weight: 900;
+  line-height: 52px;
+  letter-spacing: -0.416667px;
+
+  color: #315AF2;
+}
+
+.kodland__create-post .row {
+  margin-top: 35px;
+}
+
+.kodland__create-post_input {
+  padding: 13px 4px;
+
+  background: #FFFFFF;
+  border: 2px solid #CDCDCD !important;
+  border-radius: 3px !important;
+
+  font-family: Circe Rounded;
+  font-size: 24px !important;
+  line-height: 52px;
+  letter-spacing: -0.416667px;
+  text-indent: 13px;
+
+  color: #315AF2;
+}
+
+.kodland__create-post_input::placeholder {
+  color: #C4C4C4;
+}
+
+.kodland__create-post_input:focus {
+  box-shadow: none !important;
+  border-bottom: 2px solid #CDCDCD;
+  text-indent: 13px;
+}
+
+.kodland__create-post_submit {
+  width: 159px;
+  height: 50px;
+
+  font-family: Museo Cyrl;
+  font-size: 18px;
+  line-height: 22px;
+  
+  background: #E9399C;
+}
+
+.kodland__create-post_submit:hover,
+.kodland__create-post_submit:focus {
+  background: rgba(233, 57, 156, .75);
+}
+
+.kodland__create-post_textarea-wrapper {
+  height: 400px;
+  margin-bottom: 4em;
+
+  border: 2px solid #CDCDCD;
+  border-radius: 3px;
+}
+
+.kodland__create-post_textarea-toolbox {
+  display: flex;
+  overflow: hidden;
+  
+  border-bottom: 2px solid #CDCDCD;
+}
+
+.kodland__create-post_textarea-toolbox .fake1 {
+  display: inline-block;
+  margin: 4px 18px 0;
+
+  font-family: Circe Rounded;
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 26px;
+
+  color: #000000;
+}
+
+.kodland__create-post_textarea-toolbox .fake2 {
+  display: inline-block;
+  width: 100%;
+
+  background: url(images/textarea-tools.svg) no-repeat;
+  background-size: contain;
+}
+
+.kodland__create-post_textarea-wrapper textarea {
+  height: 365px;
+  padding: 8px 13px;
+
+  border: 0;
+  resize: none;
+
+  font-family: Circe Rounded;
+}
+
+.kodland__create-post_image-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  border: 2px solid #CDCDCD;
+  border-radius: 3px;
+}
+
+.kodland__create-post_image-title {
+  margin-top: 17px;
+
+  font-family: Circe Rounded;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 31px;
+  text-align: center;
+
+  color: #315AF2;
+}
+
+.kodland__create-post_image-input {
+  display: none;
+}
+
+.kodland__create-post_image-upload {
+  width: 155px;
+  height: 50px;
+  margin: 11px auto 26px;
+
+  background: #315AF2;
+  border-radius: 3px;
+
+  font-family: Museo Cyrl;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.kodland__create-post_image-preview-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 2px 3px;
+}
+
+.kodland__create-post_image-preview {
+  width: 100%;
+  height: auto;
+
+  border: 2px solid #E5E5E5;
+}
+
+.kodland__create-post_image-remove {
+  position: absolute;
+  margin-top: 12px;
+  margin-left: -16px;
+  align-self: flex-end;
+
+  content: url(images/remove.svg);
+  cursor: pointer;
+}

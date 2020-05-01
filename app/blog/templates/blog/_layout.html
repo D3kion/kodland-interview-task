@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,13 +14,13 @@
 <body>
   <header>
     <nav class="kodland__navbar">
-      <a href="#" class="kodland__navbar_logo"></a>
+      <a href="/" class="kodland__navbar_logo"></a>
       <span class="kodland__navbar_pagename">
         {% block header %}Блог{% endblock %}
       </span>
       <div class="kodland__navbar-menu">
         <a href="#" class="kodland__navbar-menu__item kodland__navbar-menu__email"></a>
-        <a href="#" class="kodland__navbar-menu__item kodland__navbar-menu__profile"></a>
+        <a href="{% url 'create-post' %}" class="kodland__navbar-menu__item kodland__navbar-menu__profile"></a>
         <a href="#" class="kodland__navbar-menu__item kodland__navbar-menu__logout"></a>
       </div>
     </nav>
@@ -30,6 +31,7 @@
     {% endblock %}
   </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="{% static 'blog/index.js' %}"></script>
 </body>
 
 </html>

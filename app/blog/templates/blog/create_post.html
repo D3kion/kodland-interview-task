@@ -1,1 +1,46 @@
-<h1>Create blog post</h1>
+{% extends 'blog/_layout.html' %}
+
+{% block header %}
+Блог / Добавить статью
+{% endblock %}
+
+{% block content %}
+<div class="kodland__create-post">
+  <span class="kodland__create-post_title">Добавить статью</span>
+  <form action="/posts/create" method="POST">
+    {% csrf_token %}
+    <div class="row">
+      <div class="col s8">
+        <input class="kodland__create-post_input" type="text" name="title" placeholder="Введите название статьи">
+      </div>
+      <div class="col s4">
+        <button class="kodland__ui_button kodland__create-post_submit">Опубликовать</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s8">
+        <div class="kodland__create-post_textarea-wrapper">
+          <div class="kodland__create-post_textarea-toolbox">
+            <div class="fake1">Абзац</div>
+            <div class="fake2"></div>
+          </div>
+          <textarea name="content" cols="30" rows="40"></textarea>
+        </div>
+      </div>
+      <div class="col s4">
+        <div class="kodland__create-post_image-wrapper">
+          <div class="kodland__create-post_image-title">Загрузить изображение</div>
+          <input class="kodland__create-post_image-input" id="image" type="file">
+          <button class="kodland__ui_button kodland__create-post_image-upload">
+            Выбрать
+          </button>
+          <div class="kodland__create-post_image-preview-wrapper hide">
+            <span class="kodland__create-post_image-remove"></span>
+            <img src="" class="kodland__create-post_image-preview">
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+{% endblock %}

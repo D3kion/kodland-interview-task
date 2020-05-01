@@ -1,5 +1,9 @@
 # KodLand Interview Task
 
+## Important note
+
+**Link to `create post` page is on user avatar.**
+
 ## Installation
 
 - Create venv and install dependencies

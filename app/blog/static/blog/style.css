@@ -457,7 +457,8 @@
 }
 
 .kodland__create-post_image-input {
-  display: none;
+  height: 1px;
+  opacity: 0;
 }
 
 .kodland__create-post_image-upload {

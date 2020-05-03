@@ -11,7 +11,7 @@
     {% csrf_token %}
     <div class="row">
       <div class="col s8">
-        <input class="kodland__create-post_input" type="text" name="title" placeholder="Введите название статьи">
+        <input class="kodland__create-post_input" type="text" name="title" placeholder="Введите название статьи" required>
       </div>
       <div class="col s4">
         <button class="kodland__ui_button kodland__create-post_submit">Опубликовать</button>
@@ -24,16 +24,16 @@
             <div class="fake1">Абзац</div>
             <div class="fake2"></div>
           </div>
-          <textarea name="content" cols="30" rows="40"></textarea>
+          <textarea name="content" cols="30" rows="40" required></textarea>
         </div>
       </div>
       <div class="col s4">
         <div class="kodland__create-post_image-wrapper">
           <div class="kodland__create-post_image-title">Загрузить изображение</div>
-          <input class="kodland__create-post_image-input" name="image" type="file">
           <button class="kodland__ui_button kodland__create-post_image-upload">
             Выбрать
           </button>
+          <input class="kodland__create-post_image-input" name="image" type="file" required>
           <div class="kodland__create-post_image-preview-wrapper hide">
             <span class="kodland__create-post_image-remove"></span>
             <img src="" class="kodland__create-post_image-preview">
